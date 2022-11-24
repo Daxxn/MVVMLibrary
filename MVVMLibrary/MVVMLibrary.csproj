@@ -8,6 +8,8 @@
     <Title>MVVM Library</Title>
     <Description>Model-View-ViewModel library for WPF applications.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Daxxn/MVVMLibrary.git</RepositoryUrl>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
