@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace MVVMLibrary
@@ -14,15 +13,15 @@ namespace MVVMLibrary
       /// <para/>
       /// Event that updates the GUI.
       /// <para/>
-      /// Use <see cref="OnPropertyChanged(string?)"/> to trigger event.
+      /// Use <see cref="OnPropertyChanged(string)"/> to trigger event.
       /// </summary>
-      public event PropertyChangedEventHandler? PropertyChanged = (s, e) => { };
+      public event PropertyChangedEventHandler PropertyChanged = (s, e) => { };
 
       /// <summary>
       /// Triggers the event if able. If name is not provided, will default to the name of the property its called from.
       /// </summary>
       /// <param name="name">Name of the property to provide to the event.</param>
-      public void OnPropertyChanged([CallerMemberName] string? name = null)
+      public void OnPropertyChanged([CallerMemberName] string name = null)
       {
          if (!string.IsNullOrEmpty(name))
          {

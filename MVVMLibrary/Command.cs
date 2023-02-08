@@ -12,13 +12,13 @@ namespace MVVMLibrary
       /// <summary>
       /// The action to perform when the command is executed.
       /// </summary>
-      public Action<object>? ExecuteDelegate { get; private set; }
+      public Action<object> ExecuteDelegate { get; private set; }
       /// <summary>
       /// !!Not Used!!
       /// <para/>
       /// Will update the <see cref="ViewModel"/> when the Command can be triggered?
       /// </summary>
-      public event EventHandler? CanExecuteChanged = null!;
+      public event EventHandler CanExecuteChanged;
 
       /// <summary>
       /// !!Not Used!!
@@ -48,12 +48,12 @@ namespace MVVMLibrary
       /// </summary>
       /// <param name="param">Optional parameter to be passed to the delegate.</param>
       /// <returns>True if able to execute.</returns>
-      public bool CanExecute(object? param) => true;
+      public bool CanExecute(object param) => true;
 
       /// <summary>
       /// Executes the delegate.
       /// </summary>
       /// <param name="parameter">Optional parameter to be passed to the delegate.</param>
-      public void Execute(object? parameter) => ExecuteDelegate?.Invoke(parameter ?? new object());
+      public void Execute(object parameter) => ExecuteDelegate?.Invoke(parameter ?? new object());
    }
 }

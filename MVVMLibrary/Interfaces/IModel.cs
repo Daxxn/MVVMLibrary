@@ -13,7 +13,7 @@ namespace MVVMLibrary
       /// <para/>
       /// Event that updates the GUI.
       /// <para/>
-      /// Use <see cref="OnPropertyChanged(string?)"/> to trigger event.
+      /// Use <see cref="OnPropertyChanged(string)"/> to trigger event.
       /// </summary>
       event PropertyChangedEventHandler PropertyChanged;
 
@@ -21,7 +21,7 @@ namespace MVVMLibrary
       /// Triggers the event if able. If name is not provided, will default to the name of the property its called from.
       /// </summary>
       /// <param name="name">Name of the property to provide to the event.</param>
-      void OnPropertyChanged([CallerMemberName] string? name = null);
+      void OnPropertyChanged([CallerMemberName] string name = null);
 
       /// <summary>
       /// Triggers the <see cref="PropertyChanged"/> event for multiple names at the same time.

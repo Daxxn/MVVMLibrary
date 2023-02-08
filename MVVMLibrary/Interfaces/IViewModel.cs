@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MVVMLibrary
+﻿namespace MVVMLibrary
 {
    /// <summary>
    /// ONLY used for view models.
